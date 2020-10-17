@@ -24,7 +24,7 @@ public class DemoApplication {
         repositoryUsers.save(new Users(name));
         List<Users> all = repositoryUsers.findAll();
         String rows = all.stream().flatMap( userName -> Stream.of(userName.getName())).toString();
-        return rows;
+        return name;
     }
 
     public static void main(String[] args) {
