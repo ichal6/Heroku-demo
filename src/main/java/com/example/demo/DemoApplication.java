@@ -21,7 +21,7 @@ public class DemoApplication {
     @RequestMapping("/{name}")
     @ResponseBody
     String home(@PathVariable String name) {
-        repositoryUsers.save(new Users(name));
+        repositoryUsers.save(new Users(1L, name));
 //        List<Users> all = repositoryUsers.findAll();
 //        String rows = all.stream().flatMap( userName -> Stream.of(userName.getName())).toString();
         return name;
