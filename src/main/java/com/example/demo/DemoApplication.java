@@ -9,10 +9,10 @@ import org.springframework.stereotype.*;
 @SpringBootApplication
 public class DemoApplication {
 
-    @RequestMapping("/")
+    @RequestMapping("/{name}")
     @ResponseBody
-    String home() {
-      return "Hello World!";
+    String home(@PathVariable String name) {
+      return "Hello -" + name + "!";
     }
 
     public static void main(String[] args) {
